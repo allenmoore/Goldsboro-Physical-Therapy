@@ -1,0 +1,27 @@
+{
+	"name": "gpt",
+	"description": "A custom WordPress child theme for Divi for Goldsboro Physical Therapy.",
+	"version": "1.0.0",
+	"type": "wordpress-theme",
+	"keywords": [],
+	"homepage": "https://goldsborophysicaltherapy.com",
+	"license": "MIT",
+	"authors": [{
+		"name": "Allen Moore",
+		"email": "am@allenmoore.co",
+		"homepage": "https://allenmoore.co",
+		"role": "Developer"
+	}],
+	"autoload": {
+		"psr-4": {
+			"GPT\\": "includes"
+		},
+		"files": [
+			"includes/TemplateTags.php"
+		]
+	},
+	"minimum-stability": "dev",
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
