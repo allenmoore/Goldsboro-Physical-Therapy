@@ -2,7 +2,32 @@
 
 namespace GPT;
 
+use GPT\Modules\Performance\DNSPrefetch;
+use GPT\Modules\Performance\ScriptLocation;
+use GPT\Modules\Performance\AsyncScripts;
+
 class Theme {
+
+	/**
+	 * Property representing the DNSPrefetch class.
+	 *
+	 * @var \GPT\Modules\Performance\DNSPrefetch
+	 */
+	public $dnsPrefetch;
+
+	/**
+	 * Property representing the ScriptLocation class.
+	 *
+	 * @var \GPT\Modules\Performance\ScriptLocation
+	 */
+	public $scriptLocation;
+
+	/**
+	 * Property representing the AsyncScripts class.
+	 *
+	 * @var \GPT\Modules\Performance\AsyncScripts
+	 */
+	public $asyncScripts;
 
 	/**
 	 * The Theme Constructor.
@@ -10,6 +35,10 @@ class Theme {
 	public function __construct() {
 
 		$this->setupL10n();
+
+		$this->dnsPrefetch = new DNSPrefetch();
+		$this->scriptLocation = new ScriptLocation();
+		$this->asyncScripts = new AsyncScripts();
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueParentStyles' ), 9 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueStyles' ) );
@@ -48,7 +77,9 @@ class Theme {
 		wp_enqueue_style(
 			'gpt',
 			$themeUrl . 'dist/css/style.css',
-			[$parentStyle],
+			array(
+				$parentStyle
+			),
 			GPT_VERSION,
 			'all'
 		);
