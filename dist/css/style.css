@@ -1,0 +1,82 @@
+/**
+ * Goldsboro Physical Therapy: Theme Styles
+ * https://goldsborophysicaltherapy.com
+ *
+ * Copyright (c) 2019 Goldsboro Physical Therapy
+ * Licensed under the MIT license.
+ */
+
+/**
+ * Goldsboro Physical Therapy: Global Variables
+ * https://goldsborophysicaltherapy.com
+ *
+ * Copyright (c) 2019 Goldsboro Physical Therapy
+ * Licensed under the MIT license.
+ */
+
+:root {
+	--color-black: black;
+	--color-black-50: rgba(0, 0, 0, .5);
+	--color-black-80: rgba(0, 0, 0, .8);
+	--color-white: white;
+	--color-white-50: rgba(255, 255, 255, .5);
+	--color-white-75: rgba(255, 255, 255, .75);
+	--color-blue: rgba(0, 134, 193, 1);
+	--color-blue-50: rgba(0, 134, 193, .5);
+	--color-blue-light: rgba(3, 179, 255, 1);
+	--color-blue-lighter: rgba(151, 222, 252, 1);
+	--color-blue-lightest: rgba(202, 240, 254, 1);
+	--color-blue-dark: rgba(0, 60, 86, 1);
+	--color-blue-dark-50: rgba(0, 60, 86, .5);
+	--color-blue-darker: rgba(0, 39, 56, 1);
+	--color-blue-darker-50: rgba(0, 39, 56, .5);
+	--color-blue-darkest: rgba(0, 9, 13, 1);
+	--color-gray: rgba(85, 85, 85, 1);
+	--color-gray-light: rgba(121, 118, 121, 1);
+	--color-gray-lighter: rgba(200, 200, 200, 1);
+	--color-gray-lightest: rgba(248, 247, 247, 1);
+	--color-gray-dark: rgba(57, 56, 57, 1);
+	--color-gray-darker: rgba(34, 34, 34, 1);
+	--color-gray-darkest: rgba(17, 17, 17, 1);
+	--primary-font: proxima-nova, sans-serif;
+	--secondary-font: grad, serif;
+	--max-width: 78.375rem;
+	--gutter-large: 4rem;
+	--gutter-medium: 2rem;
+	--gutter-base: 1rem;
+	--gutter-small: .5rem;
+}
+
+/* 400px */
+
+/* 650px */
+
+/* 783px */
+
+/* 850px */
+
+/* 1000px */
+
+/* 1260px */
+
+/**
+ * Global Mixins
+ */
+
+/*img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+} */
+
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+label {
+	cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
