@@ -2,11 +2,19 @@
 
 namespace GPT;
 
+use GPT\Modules\Performance\CriticalCSS;
 use GPT\Modules\Performance\DNSPrefetch;
 use GPT\Modules\Performance\ScriptLocation;
 use GPT\Modules\Performance\AsyncScripts;
 
 class Theme {
+
+	/**
+	 * Property representing the CriticalCSS class.
+	 *
+	 * @var \GPT\Modules\Performance\CriticalCSS
+	 */
+	public $criticalCSS;
 
 	/**
 	 * Property representing the DNSPrefetch class.
@@ -36,6 +44,7 @@ class Theme {
 
 		$this->setupL10n();
 
+		$this->criticalCSS = new CriticalCSS();
 		$this->dnsPrefetch = new DNSPrefetch();
 		$this->scriptLocation = new ScriptLocation();
 		$this->asyncScripts = new AsyncScripts();
@@ -57,6 +66,7 @@ class Theme {
 	 * Method to enqueue the parent theme styles.
 	 */
 	public function enqueueParentStyles() {
+
 		$parentStyle = 'divi-style';
 		$parentUrl = trailingslashit( GPT_TEMPLATE_URL );
 
@@ -70,6 +80,7 @@ class Theme {
 	 * Method to enqueue the front end CSS.
 	 */
 	public function enqueueStyles() {
+
 		$min = defined( 'SCRIPT_DEBUG' ) && filter_var( SCRIPT_DEBUG, FILTER_VALIDATE_BOOLEAN ) ? '' : '.min';
 		$parentStyle = 'divi-style';
 		$themeUrl = trailingslashit( GPT_URL );
