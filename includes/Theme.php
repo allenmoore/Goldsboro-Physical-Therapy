@@ -49,8 +49,8 @@ class Theme {
 		$this->scriptLocation = new ScriptLocation();
 		$this->asyncScripts = new AsyncScripts();
 
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueParentStyles' ), 9 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueStyles' ) );
+		//add_action( 'wp_enqueue_scripts', array( $this, 'enqueueParentStyles' ), 9 );
+		//add_action( 'wp_enqueue_scripts', array( $this, 'enqueueStyles' ) );
 	}
 
 	/**

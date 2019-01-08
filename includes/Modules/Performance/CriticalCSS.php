@@ -32,12 +32,17 @@ class CriticalCSS {
 		$basePath = trailingslashit( GPT_PATH . 'dist/css' );
 		$parentThemeBasePath = trailingslashit( GPT_TEMPLATE_URL );
 		$parentThemeCSS = $parentThemeBasePath . 'style.css';
+		$themePath = trailingslashit( GPT_URL . '/dist/css' );
+		$themeCSS = $themePath . 'style.css';
+		$verNum = GPT_VERSION;
 		?>
 		<style>
 			<?php include( $basePath . 'critical.style.min.css' );  ?>
 		</style>
 		<link rel="preload" href="<?php echo esc_url( $parentThemeCSS ); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
 		<noscript><link rel="stylesheet" href="<?php echo esc_url( $parentThemeCSS ); ?>"></noscript>
+		<link rel="preload" href="<?php echo esc_url( $themeCSS . '?ver=' . $verNum ); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="<?php echo esc_url( $themeCSS . '?ver=' . $verNum ); ?>"></noscript>
 		<?php $this->inlineJSPolyfill();
 	}
 }
