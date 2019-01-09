@@ -53,6 +53,9 @@ class Theme {
 		$this->setupL10n();
 
 		$this->dnsPrefetch = new DNSPrefetch();
+
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueParentStyles' ), 9 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueStyles' ) );
 	}
 
 	/**
