@@ -8,7 +8,7 @@ class AsyncScripts {
 	 * The AsyncScripts Constructor.
 	 */
 	public function __construct() {
-		add_filter( 'script_loader_tag', [$this, 'callScripts'], 100, 3 );
+		add_filter( 'script_loader_tag', [$this, 'callScripts'], 1000, 3 );
 	}
 
 	/**
@@ -22,19 +22,27 @@ class AsyncScripts {
 	 */
 	public function callScripts( $tag, $handle, $src ) {
 
+		$min = defined( 'SCRIPT_DEBUG' ) && filter_var( SCRIPT_DEBUG, FILTER_VALIDATE_BOOLEAN ) ? '' : '.min';
 		$scripts = [
 			'jquery.js',
-			'jquery-migrate.min.js',
-			'frontend.min.js',
+			'jquery-migrate' . $min . '.js',
+			'frontend' . $min . '.js',
+			'devicepx-jetpack' . $min . '.js',
 			'jq-sticky-anything.min.js',
 			'stickThis.js',
+			'gprofiles' . $min . '.js',
 			'jquery.bxslider.js',
 			'jquery.easing.1.3.js',
-			'photon.min.js',
+			'photon' . $min . '.js',
 			'wpgroho.js',
-			'custom.min.js',
+			'milestone' . $min . '.js',
+			'custom' . $min . '.js',
 			'common.js',
-			'wp_footer.js'
+			'jquery.fitvids' . $min . '.js',
+			'waypoints.min.js',
+			'jquery.magnific-popup' . $min . '.js',
+			'wp_footer.js',
+			'wp-embed.js',
 		];
 
 		foreach ( $scripts as $script ) {
