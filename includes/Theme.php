@@ -5,6 +5,7 @@ namespace GPT;
 use GPT\Modules\Performance\CriticalCSS;
 use GPT\Modules\Performance\DNSPrefetch;
 use GPT\Modules\Performance\ScriptLocation;
+use GPT\Modules\Performance\StylesLocation;
 use GPT\Modules\Performance\AsyncScripts;
 
 class Theme {
@@ -31,6 +32,13 @@ class Theme {
 	public $scriptLocation;
 
 	/**
+	 * Property representing the StylesLocation class.
+	 *
+	 * @var \GPT\Modules\Performance\StylesLocation
+	 */
+	public $stylesLocation;
+
+	/**
 	 * Property representing the AsyncScripts class.
 	 *
 	 * @var \GPT\Modules\Performance\AsyncScripts
@@ -44,13 +52,7 @@ class Theme {
 
 		$this->setupL10n();
 
-		$this->criticalCSS = new CriticalCSS();
 		$this->dnsPrefetch = new DNSPrefetch();
-		$this->scriptLocation = new ScriptLocation();
-		$this->asyncScripts = new AsyncScripts();
-
-		//add_action( 'wp_enqueue_scripts', array( $this, 'enqueueParentStyles' ), 9 );
-		//add_action( 'wp_enqueue_scripts', array( $this, 'enqueueStyles' ) );
 	}
 
 	/**
