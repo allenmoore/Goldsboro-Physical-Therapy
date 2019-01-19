@@ -48,6 +48,17 @@ gulp.task('copy-js', gulp.series(['copy-vendor'], (done) => {
 }));
 
 /**
+ * Gulp task to compress all theme images.
+ *
+ * @param {String} 'imagemin' the task name.
+ * @param {Function} cb the pipe sequence that gulp should run.
+ * @returns {void}
+ */
+gulp.task('imagemin', gulp.series(['image'], (done) => {
+  done();
+}))
+
+/**
  * Gulp task to run all minification processes in a sequential order.
  *
  * @param {String} 'minify' the task name.
@@ -66,7 +77,7 @@ gulp.task('minify', gulp.series(['cssnano'], function(done) {
  * @returns {void}
  */
 gulp.task('watch', () => {
-  gulp.watch('./src/css/**/*.css', gulp.series(['clean-files', 'css', 'minify']));
+  gulp.watch('./src/css/**/*.css', gulp.series(['clean-files', 'css', 'imagemin', 'minify']));
 })
 
 /**
@@ -76,6 +87,6 @@ gulp.task('watch', () => {
  * @param {Function} cb the pipe sequence that gulp should run.
  * @returns {void}
  */
-gulp.task('default', gulp.series(['clean-files', 'css', 'copy-js', 'minify'], function(done) {
+gulp.task('default', gulp.series(['clean-files', 'css', 'copy-js', 'imagemin', 'minify'], function(done) {
   done();
 }));

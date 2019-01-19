@@ -2,6 +2,8 @@
 
 namespace GPT;
 
+use GPT\Modules\Header\Fonts;
+use GPT\Modules\Media\ResponsiveImages;
 use GPT\Modules\Performance\CriticalCSS;
 use GPT\Modules\Performance\DNSPrefetch;
 use GPT\Modules\Performance\ScriptLocation;
@@ -9,6 +11,20 @@ use GPT\Modules\Performance\StylesLocation;
 use GPT\Modules\Performance\AsyncScripts;
 
 class Theme {
+
+	/**
+	 * Property representing the Fonts class.
+	 *
+	 * @var \GPT\Modules\Header\Fonts
+	 */
+	public $themeFonts;
+
+	/**
+	 * Property representing the ResponsiveImages class.
+	 *
+	 * @var \GPT\Modules\Media\ResponsiveImages
+	 */
+	public $respImgs;
 
 	/**
 	 * Property representing the CriticalCSS class.
@@ -52,6 +68,8 @@ class Theme {
 
 		$this->setupL10n();
 
+		$this->themeFonts = new Fonts();
+		$this->respImgs = new ResponsiveImages();
 		$this->dnsPrefetch = new DNSPrefetch();
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueParentStyles' ), 9 );

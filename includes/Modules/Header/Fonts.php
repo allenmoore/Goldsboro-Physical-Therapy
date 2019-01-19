@@ -25,108 +25,68 @@ class Fonts {
 		?>
 		<style>
 			@font-face {
-				font-family: 'proxima-nova';
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light.eot' ); ?> );
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light.eot?#iefix' ); ?> ) format('embedded-opentype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light.woff2' ); ?> ) format('woff2'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light.woff' ); ?> ) format('woff'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light.ttf' ); ?> ) format('truetype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light.svg#proxima-nova-light' ); ?> ) format('svg');
-				font-weight: 300;
+				font-family: 'Lato';
+				font-display: auto;
 				font-style: normal;
+				font-weight: 700;
+				src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
-
 			@font-face {
-				font-family: 'proxima-nova';
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light-italic.eot' ); ?> );
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light-italic.eot?#iefix' ); ?> ) format('embedded-opentype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light-italic.woff2' ); ?> ) format('woff2'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light-italic.woff' ); ?> ) format('woff'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light-italic.ttf' ); ?> ) format('truetype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-light-italic.svg#proxima-nova-light-italic' ); ?> ) format('svg');
-				font-weight: 300;
+				font-family: 'Lato';
+				font-display: auto;
 				font-style: italic;
+				font-weight: 700;
+				src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
-
 			@font-face {
-				font-family: 'proxima-nova';
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular.eot' ); ?> )
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular.eot?#iefix' ); ?> ) format('embedded-opentype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular.woff2' ); ?> ) format('woff2'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular.woff' ); ?> ) format('woff'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular.ttf' ); ?> ) format('truetype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular.svg#proxima-nova-regular' ); ?> ) format('svg');
-				font-weight: normal;
+				font-family: 'Open Sans';
+				font-display: auto;
 				font-style: normal;
+				font-weight: 400;
+				src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
-
 			@font-face {
-				font-family: 'proxima-nova';
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular-italic.eot' ); ?> );
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular-italic.eot?#iefix' ); ?> ) format('embedded-opentype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular-italic.woff2' ); ?> ) format('woff2'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular-italic.woff' ); ?> ) format('woff'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular-italic.ttf' ); ?> ) format('truetype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-regular-italic.svg#proxima-nova-regular-italic' ); ?> ) format('svg');
-				font-weight: normal;
+				font-family: 'Open Sans';
+				font-display: auto;
 				font-style: italic;
+				font-weight: 400;
+				src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v15/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
-
 			@font-face {
-				font-family: 'proxima-nova';
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold.eot' ); ?> );
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold.eot?#iefix'); ?> ) format('embedded-opentype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold.woff2'); ?> ) format('woff2'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold.woff'); ?> ) format('woff'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold.ttf'); ?> ) format('truetype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold.svg#proxima-nova-bold'); ?> ) format('svg');
-				font-weight: bold;
+				font-family: 'Open Sans';
+				font-display: auto;
 				font-style: normal;
+				font-weight: 600;
+				src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
-
 			@font-face {
-				font-family: 'proxima-nova';
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold-italic.eot' ); ?> );
-				src: url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold-italic.eot?#iefix'); ?> ) format('embedded-opentype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold-italic.woff2'); ?> ) format('woff2'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold-italic.woff'); ?> ) format('woff'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold-italic.ttf'); ?> ) format('truetype'),
-				url(<?php echo esc_url( $fontDir . 'proxima-nova/proxima-nova-bold-italic.svg#proxima-nova-bold-italic'); ?> ) format('svg');
-				font-weight: bold;
+				font-family: 'Open Sans';
+				font-display: auto;
 				font-style: italic;
+				font-weight: 600;
+				src: local('Open Sans SemiBold Italic'), local('OpenSans-SemiBoldItalic'), url(https://fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKXGUdhrIqOxjaPX.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
 			@font-face {
-				font-family: 'grad';
-				src: url(<?php echo esc_url( $fontDir . 'grad/grad-regular.eot' ); ?> );
-				src: url(<?php echo esc_url( $fontDir . 'grad/grad-regular.eot?#iefix' ); ?> ) format('embedded-opentype'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-regular.woff2' ); ?> ) format('woff2'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-regular.woff' ); ?> ) format('woff'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-regular.ttf' ); ?> ) format('truetype'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-regular.svg#grad-regular' ); ?> ) format('svg');
-				font-weight: normal;
+				font-family: 'Open Sans';
+				font-display: auto;
 				font-style: normal;
+				font-weight: 700;
+				src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
 			@font-face {
-				font-family: 'grad';
-				src: url(<?php echo esc_url( $fontDir . 'grad/grad-regular-italic.eot' ); ?> );
-				src: url(<?php echo esc_url( $fontDir . 'grad/grad-regular-italic.eot?#iefix' ); ?> ) format('embedded-opentype'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-regular-italic.woff2' ); ?> ) format('woff2'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-regular-italic.woff' ); ?> ) format('woff'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-regular-italic.ttf' ); ?> ) format('truetype'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-regular-italic.svg#grad-regular-italic' ); ?> ) format('svg');
-				font-weight: normal;
+				font-family: 'Open Sans';
+				font-display: auto;
 				font-style: italic;
-			}
-			@font-face {
-				font-family: 'grad';
-				src: url(<?php echo esc_url( $fontDir . 'grad/grad-bold.eot' ); ?> );
-				src: url(<?php echo esc_url( $fontDir . 'grad/grad-bold.eot?#iefix' ); ?> ) format('embedded-opentype'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-bold.woff2' ); ?> ) format('woff2'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-bold.woff' ); ?> ) format('woff'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-bold.ttf' ); ?> ) format('truetype'),
-				url(<?php echo esc_url( $fontDir . 'grad/grad-bold.svg#grad-bold' ); ?> ) format('svg');
-				font-weight: bold;
-				font-style: normal;
+				font-weight: 700;
+				src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWiUNhrIqOxjaPX.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
 		</style>
 		<?php

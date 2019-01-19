@@ -1,0 +1,5 @@
+@media all and (min-width: 768px) {
+	.page-template-default.et_fixed_nav.et_show_nav #page-container {
+		padding-top: 111px;
+	}
+}
