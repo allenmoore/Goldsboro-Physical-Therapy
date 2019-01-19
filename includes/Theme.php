@@ -2,7 +2,6 @@
 
 namespace GPT;
 
-use GPT\Modules\Header\Fonts;
 use GPT\Modules\Media\ResponsiveImages;
 use GPT\Modules\Performance\CriticalCSS;
 use GPT\Modules\Performance\DNSPrefetch;
@@ -11,13 +10,6 @@ use GPT\Modules\Performance\StylesLocation;
 use GPT\Modules\Performance\AsyncScripts;
 
 class Theme {
-
-	/**
-	 * Property representing the Fonts class.
-	 *
-	 * @var \GPT\Modules\Header\Fonts
-	 */
-	public $themeFonts;
 
 	/**
 	 * Property representing the ResponsiveImages class.
@@ -68,7 +60,6 @@ class Theme {
 
 		$this->setupL10n();
 
-		$this->themeFonts = new Fonts();
 		$this->respImgs = new ResponsiveImages();
 		$this->dnsPrefetch = new DNSPrefetch();
 
