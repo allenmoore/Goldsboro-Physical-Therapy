@@ -2,28 +2,9 @@
 
 namespace GPT;
 
-use GPT\Modules\Media\ResponsiveImages;
-use GPT\Modules\Performance\CriticalCSS;
 use GPT\Modules\Performance\DNSPrefetch;
-use GPT\Modules\Performance\ScriptLocation;
-use GPT\Modules\Performance\StylesLocation;
-use GPT\Modules\Performance\AsyncScripts;
 
 class Theme {
-
-	/**
-	 * Property representing the ResponsiveImages class.
-	 *
-	 * @var \GPT\Modules\Media\ResponsiveImages
-	 */
-	public $respImgs;
-
-	/**
-	 * Property representing the CriticalCSS class.
-	 *
-	 * @var \GPT\Modules\Performance\CriticalCSS
-	 */
-	public $criticalCSS;
 
 	/**
 	 * Property representing the DNSPrefetch class.
@@ -33,34 +14,12 @@ class Theme {
 	public $dnsPrefetch;
 
 	/**
-	 * Property representing the ScriptLocation class.
-	 *
-	 * @var \GPT\Modules\Performance\ScriptLocation
-	 */
-	public $scriptLocation;
-
-	/**
-	 * Property representing the StylesLocation class.
-	 *
-	 * @var \GPT\Modules\Performance\StylesLocation
-	 */
-	public $stylesLocation;
-
-	/**
-	 * Property representing the AsyncScripts class.
-	 *
-	 * @var \GPT\Modules\Performance\AsyncScripts
-	 */
-	public $asyncScripts;
-
-	/**
 	 * The Theme Constructor.
 	 */
 	public function __construct() {
 
 		$this->setupL10n();
 
-		$this->respImgs = new ResponsiveImages();
 		$this->dnsPrefetch = new DNSPrefetch();
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueParentStyles' ), 9 );
