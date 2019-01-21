@@ -13,7 +13,7 @@ const log = console.log;
  */
 gulp.task('clean', (cb) => {
   log(chalk.blue('--- Cleaning dist folders ---'));
-  del(['./dist/css/**/*']);
+  del(['./dist/css/**/*', '!./dist/css/critical.style.min.css']);
   cb();
 });
 

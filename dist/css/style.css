@@ -1,0 +1,43 @@
+/**
+ * Goldsboro Physical Therapy: Theme Styles
+ * https://goldsborophysicaltherapy.com
+ *
+ * Copyright (c) 2019 Goldsboro Physical Therapy
+ * Licensed under the MIT license.
+ */
+
+/**
+ * Goldsboro Physical Therapy: Global Variables
+ * https://goldsborophysicaltherapy.com
+ *
+ * Copyright (c) 2019 Goldsboro Physical Therapy
+ * Licensed under the MIT license.
+ */
+
+/**
+ * Global Mixins
+ */
+
+/*img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+} */
+
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+label {
+	cursor: pointer;
+}
+
+@media all and (min-width: 768px) {
+	.page-template-default.et_fixed_nav.et_show_nav #page-container {
+		padding-top: 111px;
+	}
+}
+
+/*# sourceMappingURL=style.css.map */
