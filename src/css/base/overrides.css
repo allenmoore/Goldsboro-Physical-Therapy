@@ -1,0 +1,15 @@
+/*img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+} */
+
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+label {
+	cursor: pointer;
+}
