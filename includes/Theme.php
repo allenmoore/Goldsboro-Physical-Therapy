@@ -2,7 +2,16 @@
 
 namespace GPT;
 
+use GPT\Modules\Performance\DNSPrefetch;
+
 class Theme {
+
+	/**
+	 * Property representing the DNSPrefetch class.
+	 *
+	 * @var \GPT\Modules\Performance\DNSPrefetch
+	 */
+	public $dnsPrefetch;
 
 	/**
 	 * The Theme Constructor.
@@ -10,6 +19,8 @@ class Theme {
 	public function __construct() {
 
 		$this->setupL10n();
+
+		$this->dnsPrefetch = new DNSPrefetch();
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueParentStyles' ), 9 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueStyles' ) );
@@ -28,6 +39,7 @@ class Theme {
 	 * Method to enqueue the parent theme styles.
 	 */
 	public function enqueueParentStyles() {
+
 		$parentStyle = 'divi-style';
 		$parentUrl = trailingslashit( GPT_TEMPLATE_URL );
 
@@ -41,6 +53,7 @@ class Theme {
 	 * Method to enqueue the front end CSS.
 	 */
 	public function enqueueStyles() {
+
 		$min = defined( 'SCRIPT_DEBUG' ) && filter_var( SCRIPT_DEBUG, FILTER_VALIDATE_BOOLEAN ) ? '' : '.min';
 		$parentStyle = 'divi-style';
 		$themeUrl = trailingslashit( GPT_URL );
@@ -48,7 +61,9 @@ class Theme {
 		wp_enqueue_style(
 			'gpt',
 			$themeUrl . 'dist/css/style.css',
-			[$parentStyle],
+			array(
+				$parentStyle
+			),
 			GPT_VERSION,
 			'all'
 		);

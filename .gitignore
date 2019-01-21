@@ -1,5 +1,4 @@
 node_modules
-bower_components
 release
 vendor
 composer.lock
@@ -8,6 +7,7 @@ phpunit.xml
 .babelrc
 .browserslistrc
 .editorconfig
-dist/
+
+!dist/js/vendor
 
 reports
