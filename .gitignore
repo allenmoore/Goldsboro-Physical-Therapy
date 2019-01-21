@@ -1,13 +1,11 @@
 node_modules
 bower_components
 release
-vendor
 composer.lock
 phpunit.xml
 .idea
 .babelrc
 .browserslistrc
 .editorconfig
-dist/
 
 reports
