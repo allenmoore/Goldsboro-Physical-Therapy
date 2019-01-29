@@ -1,4 +1,4 @@
-.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+.et_pb_module.page-hero.-home {
 	position: relative;
 	height: 100%;
 	background-size: 100%;
@@ -14,7 +14,7 @@
 		padding-top: 6.9375rem;
 	}
 
-	.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+	.et_pb_module.page-hero.-home {
 		padding-top: 40%;
 	}
 }
@@ -48,7 +48,7 @@
 		font-size: .875rem !important;
 	}
 
-	.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+	.et_pb_module.page-hero.-home {
 		padding-top: 35%;
 	}
 }
@@ -67,7 +67,7 @@
 		font-size: 1rem !important;
 	}
 
-	.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+	.et_pb_module.page-hero.-home {
 		padding-top: 30%;
 	}
 }
@@ -83,7 +83,7 @@
 		max-height: unset !important;
 	}
 
-	.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+	.et_pb_module.page-hero.-home {
 		padding-top: 25%;
 	}
 }
