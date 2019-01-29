@@ -1,6 +1,21 @@
+.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+	position: relative;
+	height: 100%;
+	background-size: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 45%;
+	overflow: hidden;
+}
+
 @media (--bp-small) {
 	.page-template-default.et_fixed_nav.et_show_nav #page-container {
 		padding-top: 6.9375rem;
+	}
+
+	.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+		padding-top: 40%;
 	}
 }
 
@@ -32,6 +47,10 @@
 		padding-left: 1rem;
 		font-size: .875rem !important;
 	}
+
+	.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+		padding-top: 35%;
+	}
 }
 
 @media (--bp-large) {
@@ -47,6 +66,10 @@
 	#top-menu li {
 		font-size: 1rem !important;
 	}
+
+	.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+		padding-top: 30%;
+	}
 }
 
 @media (--bp-max-width) {
@@ -58,5 +81,9 @@
 	#logo {
 		max-width: 12.5rem;
 		max-height: unset !important;
+	}
+
+	.et_pb_module.et_pb_fullwidth_image.page-hero.-home {
+		padding-top: 25%;
 	}
 }
