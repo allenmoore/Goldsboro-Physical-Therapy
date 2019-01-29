@@ -5,3 +5,10 @@
  * Copyright (c) 2019 Goldsboro Physical Therapy
  * Licensed under the MIT license.
  */
+
+@custom-media --bp-tiny (min-width: 30rem); /* 408px */
+@custom-media --bp-small (min-width: 48rem); /* 768px */
+@custom-media --bp-wp (min-width: 48.9375rem); /* 783px */
+@custom-media --bp-medium (min-width: 61.25rem); /* 980px */
+@custom-media --bp-large (min-width: 68.75em); /* 1100px */
+@custom-media --bp-max-width (min-width: 87.8125rem); /* 1405px */

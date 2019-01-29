@@ -4,6 +4,7 @@ import cssnano from 'gulp-cssnano';
 import gulp from 'gulp';
 import livereload from 'gulp-livereload';
 import mixins from 'postcss-mixins';
+import pxtorem from 'postcss-pxtorem';
 import postcss from 'gulp-postcss';
 import presetEnv from 'postcss-preset-env';
 import rename from 'gulp-rename';
@@ -47,6 +48,12 @@ gulp.task('postcss', () => {
           'nesting-rules': true,
           'not-pseudo-class': true
         }
+      }),
+      pxtorem({
+        rootValue: 16,
+        unitPrecision: 5,
+        propList: ['*'],
+        replace: false
       }),
       rgbaFallback()
     ]))

@@ -22,8 +22,8 @@ class Theme {
 
 		$this->dnsPrefetch = new DNSPrefetch();
 
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueParentStyles' ), 9 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueStyles' ) );
+		add_action( 'wp_enqueue_scripts', [$this, 'enqueueParentStyles'], 9 );
+		add_action( 'wp_enqueue_scripts', [$this, 'enqueueStyles'] );
 	}
 
 	/**
@@ -60,7 +60,7 @@ class Theme {
 
 		wp_enqueue_style(
 			'gpt',
-			$themeUrl . 'dist/css/style.css',
+			$themeUrl . 'dist/css/style' . $min .'.css',
 			array(
 				$parentStyle
 			),

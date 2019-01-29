@@ -14,6 +14,18 @@
  * Licensed under the MIT license.
  */
 
+/* 408px */
+
+/* 768px */
+
+/* 783px */
+
+/* 980px */
+
+/* 1100px */
+
+/* 1405px */
+
 /**
  * Global Mixins
  */
@@ -34,9 +46,126 @@ label {
 	cursor: pointer;
 }
 
-@media all and (min-width: 768px) {
+/**
+ * Overrides for Divi.
+ */
+
+.et_pb_module.page-hero.-home {
+	position: relative;
+	height: 100%;
+	background-size: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 45%;
+	overflow: hidden;
+}
+
+.et_pb_module.page-hero.-home .header-content {
+	clip: rect(.1rem, .1rem, .1rem, .1rem);
+	position: absolute !important;
+	height: .1rem;
+	width: .1rem;
+	overflow: hidden;
+}
+
+.et_pb_module.page-hero.-home .header-content:hover,
+.et_pb_module.page-hero.-home .header-content:focus {
+	background-color: white;
+	border-radius: 0;
+	box-shadow: 0 0 .2rem .2rem rgba(0, 0, 0, .6);
+	clip: auto !important;
+	color: black;
+	display: block;
+	font-size: .875rem;
+	font-weight: bold;
+	height: auto;
+	left: .5rem;
+	line-height: normal;
+	padding: 1.5rem 2.3rem 1.4rem;
+	text-decoration: none;
+	top: .5rem;
+	width: auto;
+	z-index: 100000;
+}
+
+@media (min-width: 48rem) {
 	.page-template-default.et_fixed_nav.et_show_nav #page-container {
-		padding-top: 111px;
+		padding-top: 6.9375rem;
+	}
+
+	.et_pb_module.page-hero.-home {
+		padding-top: 40%;
+	}
+}
+
+@media (min-width: 61.25rem) {
+	.container.et_menu_container {
+		width: 100%;
+		max-width: 95%;
+	}
+
+	.et_fixed_nav #et-top-navigation {
+		width: calc(100% - 11.25rem);
+		padding-left: 0 !important;
+	}
+
+	nav#top-menu-nav,
+	#top-menu,
+	nav.fullwidthmenu-nav,
+	.fullwidth-menu {
+		float: right;
+	}
+
+	#logo {
+		max-width: 11.25rem;
+		max-height: unset !important;
+	}
+
+	#top-menu li {
+		padding-right: 0;
+		padding-left: 1rem;
+		font-size: .875rem !important;
+	}
+
+	.et_pb_module.page-hero.-home {
+		padding-top: 35%;
+	}
+}
+
+@media (min-width: 68.75em) {
+	.et_fixed_nav #et-top-navigation {
+		width: calc(100% - 12.5rem);
+	}
+
+	#logo {
+		max-width: 12.5rem;
+		max-height: unset !important;
+	}
+
+	#top-menu li {
+		font-size: 1rem !important;
+	}
+
+	.et_pb_module.page-hero.-home {
+		padding-top: 30%;
+	}
+}
+
+@media (min-width: 87.8125rem) {
+	.container.et_menu_container {
+		width: 80%;
+		max-width: 1080px;
+		max-width: 67.5rem;
+	}
+
+	#logo {
+		max-width: 12.5rem;
+		max-height: unset !important;
+	}
+
+	.et_pb_module.page-hero.-home {
+		padding-top: 25%;
 	}
 }
 
