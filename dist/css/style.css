@@ -434,4 +434,31 @@ label {
 	}
 }
 
+.et_pb_fullwidth_header .et_pb_fullwidth_header_container .header-content a.et_pb_button {
+	display: block !important;
+    padding-top: 16px;
+    padding-top: 1rem;
+	padding-bottom: 16px;
+	padding-bottom: 1rem;
+	line-height: 1 !important;
+	font-size: 16px !important;
+	font-size: 1rem !important;
+}
+
+.et_pb_fullwidth_header .et_pb_fullwidth_header_container .et_pb_button_two {
+	margin-left: 0;
+}
+
+@media (min-width: 61.25rem) {
+	.et_pb_fullwidth_header .et_pb_fullwidth_header_container .header-content a.et_pb_button {
+		display: inline-block !important;
+		padding-top: .3em;
+		padding-bottom: .3rem;
+		margin-right: .5rem;
+		margin-left: .5rem;
+		line-height: 1.7em !important;
+		font-size: 1.25rem !important;
+	}
+}
+
 /*# sourceMappingURL=style.css.map */
