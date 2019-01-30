@@ -1,0 +1,10 @@
+.et_pb_fullwidth_header .et_pb_fullwidth_header_container .et_pb_button_two {
+	margin-left: 0;
+}
+
+@media (--max-width) {
+	.et_pb_fullwidth_header .et_pb_fullwidth_header_container .header-content a.et_pb_button {
+		margin-right: .5rem;
+		margin-left: .5rem;
+	}
+}
