@@ -152,6 +152,17 @@ label {
 	padding-bottom: 0;
 }
 
+.et_pb_toggle_close,
+.et_pb_toggle_open {
+	padding: 10px;
+	padding: .625rem;
+}
+
+.services-list .et_pb_accordion_item {
+	margin-bottom: 10px !important;
+	margin-bottom: .625rem !important;
+}
+
 #footer-widgets .footer-widget .fwidget.et_pb_widget.widget_sp_image {
 	float: none;
 	text-align: center;
