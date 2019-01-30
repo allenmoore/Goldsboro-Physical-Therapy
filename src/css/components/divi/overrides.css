@@ -62,6 +62,15 @@
 	padding-bottom: 0;
 }
 
+.et_pb_toggle_close,
+.et_pb_toggle_open {
+	padding: .625rem;
+}
+
+.services-list .et_pb_accordion_item {
+	margin-bottom: .625rem !important;
+}
+
 @media (--bp-small) {
 	.page-template-default.et_fixed_nav.et_show_nav #page-container {
 		padding-top: 6.9375rem;
