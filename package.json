@@ -44,6 +44,9 @@
         "postcss-import": "^12.0.1",
         "postcss-preset-env": "^6.5.0",
         "require-dir": "^1.2.0",
+        "stylelint": "^9.10.1",
+        "stylelint-config-allenmoore": "^1.2.0",
+        "stylelint-no-unsupported-browser-features": "^3.0.2",
         "vinyl-buffer": "^1.0.1",
         "vinyl-source-stream": "^2.0.0"
     }
