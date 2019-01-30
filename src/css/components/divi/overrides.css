@@ -40,6 +40,15 @@
 	z-index: 100000;
 }
 
+ul li {
+	padding-bottom: 1.25rem;
+}
+
+ul li ul li {
+	padding-bottom: .875rem;
+	font-size: .875rem;
+}
+
 @media (--bp-small) {
 	.page-template-default.et_fixed_nav.et_show_nav #page-container {
 		padding-top: 6.9375rem;
