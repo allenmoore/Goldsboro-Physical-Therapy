@@ -40,13 +40,26 @@
 	z-index: 100000;
 }
 
-ul li {
+.entry-content ul li {
 	padding-bottom: 1.25rem;
 }
 
-ul li ul li {
+.entry-content ul li:nth-last-child(1) {
+	padding-bottom: 0;
+}
+
+.entry-content ul ul {
+	padding-top: .5rem;
+}
+
+.entry-content ul li ul li {
 	padding-bottom: .875rem;
+	list-style-type: circle;
 	font-size: .875rem;
+}
+
+.entry-content ul li ul li:nth-last-child(1) {
+	padding-bottom: 0;
 }
 
 @media (--bp-small) {

@@ -30,6 +30,83 @@
  * Global Mixins
  */
 
+@define-mixin flex-direction $dir: row {
+	flex-direction: $(dir);
+}
+
+@define-mixin flex-wrap $wrap: nowrap {
+	flex-wrap: $(wrap);
+}
+
+@define-mixin flex-justify-content $justify: flex-start {
+	justify-content: $(justify);
+}
+
+@define-mixin flex-align-items $items: flex-start{
+	align-items: $(items);
+}
+
+@define-mixin flex-align-content $content: flex-start {
+	align-content: $(content);
+}
+
+@define-mixin flexbox $dir: row, $wrap: nowrap, $justify: flex-start, $content: flex-start, $items: flex-start {
+	display: flex;
+	@mixin flex-direction $(dir);
+	@mixin flex-wrap $(wrap);
+	@mixin flex-justify-content $(justify);
+	@mixin flex-align-content $(content);
+	@mixin flex-align-items $(items);
+}
+
+@define-mixin flex-row $wrap: nowrap, $justify: flex-start, $content: flex-start, $items: flex-start {
+	@mixin flexbox row, $(nowrap), $(justify), $(content), $(items);
+}
+
+@define-mixin flex-grow $grow: 0 {
+	flex-grow: $(grow);
+}
+
+@define-mixin flex-shrink $shrink: 1 {
+	flex-shrink: $(shrink);
+}
+
+@define-mixin flex-basis $basis: auto {
+	flex-basis: $(basis);
+}
+
+@define-mixin flex-order $order: 0 {
+	order: $(order);
+}
+
+@define-mixin flex-align-self $align: auto {
+	align-self: $(align);
+}
+
+@define-mixin flex $order: 0, $grow: 0, $shrink: 1, $basis: auto, $align: auto {
+	@mixin flex-order $(order);
+	flex: $(grow) $(shrink) $(basis);
+	@mixin flex-align-self $(align);
+}
+
+@define-mixin container {
+	max-width: var(--max-width);
+	height: auto;
+	padding-right: var(--gutter-base);
+	padding-left: var(--gutter-base);
+	margin: 0 auto;
+
+	@media (min-width: 48rem) {
+		padding-right: var(--gutter-medium);
+		padding-left: var(--gutter-medium);
+	}
+
+	@media (min-width: 87.8125rem) {
+		padding-right: var(--gutter-large);
+		padding-left: var(--gutter-large);
+	}
+}
+
 /*img {
 	width: 100%;
 	max-width: 100%;
@@ -62,9 +139,12 @@ label {
 }
 
 .et_pb_module.page-hero.-home .header-content {
+	clip: rect(1.6px, 1.6px, 1.6px, 1.6px);
 	clip: rect(.1rem, .1rem, .1rem, .1rem);
 	position: absolute !important;
+	height: 1.6px;
 	height: .1rem;
+	width: 1.6px;
 	width: .1rem;
 	overflow: hidden;
 }
@@ -77,16 +157,46 @@ label {
 	clip: auto !important;
 	color: black;
 	display: block;
+	font-size: 14px;
 	font-size: .875rem;
 	font-weight: bold;
 	height: auto;
+	left: 8px;
 	left: .5rem;
 	line-height: normal;
+	padding: 24px 36.8px 22.4px;
 	padding: 1.5rem 2.3rem 1.4rem;
 	text-decoration: none;
+	top: 8px;
 	top: .5rem;
 	width: auto;
 	z-index: 100000;
+}
+
+.entry-content ul li {
+	padding-bottom: 20px;
+	padding-bottom: 1.25rem;
+}
+
+.entry-content ul li:nth-last-child(1) {
+	padding-bottom: 0;
+}
+
+.entry-content ul ul {
+	padding-top: 8px;
+	padding-top: .5rem;
+}
+
+.entry-content ul li ul li {
+	padding-bottom: 14px;
+	padding-bottom: .875rem;
+	list-style-type: circle;
+	font-size: 14px;
+	font-size: .875rem;
+}
+
+.entry-content ul li ul li:nth-last-child(1) {
+	padding-bottom: 0;
 }
 
 @media (min-width: 48rem) {
@@ -156,7 +266,6 @@ label {
 	.container.et_menu_container {
 		width: 80%;
 		max-width: 1080px;
-		max-width: 67.5rem;
 	}
 
 	#logo {
