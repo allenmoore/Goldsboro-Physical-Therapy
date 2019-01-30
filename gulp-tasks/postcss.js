@@ -1,16 +1,13 @@
 import atImport from 'postcss-import';
 import chalk from 'chalk';
-import cssnano from 'gulp-cssnano';
 import gulp from 'gulp';
 import livereload from 'gulp-livereload';
-import mixins from 'postcss-mixins';
-import pxtorem from 'postcss-pxtorem';
+import pixrem from 'pixrem';
 import postcss from 'gulp-postcss';
 import presetEnv from 'postcss-preset-env';
 import rename from 'gulp-rename';
 import rgbaFallback from 'postcss-color-rgba-fallback';
 import sourcemaps from 'gulp-sourcemaps';
-import vars from 'postcss-simple-vars';
 
 const log = console.log;
 
@@ -35,8 +32,6 @@ gulp.task('postcss', () => {
     .pipe(sourcemaps.init({loadMaps: true}))
 	  .pipe(postcss([
       atImport(),
-      mixins(),
-      vars(),
       presetEnv({
         stage: 2,
         features: {
@@ -49,12 +44,7 @@ gulp.task('postcss', () => {
           'not-pseudo-class': true
         }
       }),
-      pxtorem({
-        rootValue: 16,
-        unitPrecision: 5,
-        propList: ['*'],
-        replace: false
-      }),
+      pixrem(),
       rgbaFallback()
     ]))
     .pipe(sourcemaps.write('./'))
