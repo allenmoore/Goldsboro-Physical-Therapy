@@ -94,6 +94,32 @@ label {
 	z-index: 100000;
 }
 
+.entry-content ul li {
+	padding-bottom: 20px;
+	padding-bottom: 1.25rem;
+}
+
+.entry-content ul li:nth-last-child(1) {
+	padding-bottom: 0;
+}
+
+.entry-content ul ul {
+	padding-top: 8px;
+	padding-top: .5rem;
+}
+
+.entry-content ul li ul li {
+	padding-bottom: 14px;
+	padding-bottom: .875rem;
+	list-style-type: circle;
+	font-size: 14px;
+	font-size: .875rem;
+}
+
+.entry-content ul li ul li:nth-last-child(1) {
+	padding-bottom: 0;
+}
+
 #footer-widgets .footer-widget .fwidget.et_pb_widget.widget_sp_image {
 	float: none;
 	text-align: center;
