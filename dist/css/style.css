@@ -435,4 +435,60 @@ label {
 	}
 }
 
+table {
+    width: 100%;
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
+	border-collapse: collapse;
+    border-radius: 0;
+}
+
+thead,
+tbody,
+tfoot {
+	border: 1px solid #f1f1f1;
+    color: #0a0a0a;
+}
+
+thead,
+tfoot {
+	background-color: #f8f8f8;
+}
+
+thead tr,
+tfoot tr {
+    background: transparent;
+}
+
+thead th,
+thead td,
+tfoot th,
+tfoot td {
+    padding: 8px 10px 10px;
+    padding: .5rem .625rem .625rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+tbody {
+	background-color: #fefefe;
+}
+
+thead th,
+tbody td {
+	border-right: 1px solid #eee;
+}
+
+table tbody tr {
+    border-bottom: 0;
+    border-bottom: 1px solid #f1f1f1;
+    background-color: #fefefe;
+}
+
+tbody th,
+tbody td {
+    padding: 8px 10px 10px;
+    padding: .5rem .625rem .625rem;
+}
+
 /*# sourceMappingURL=style.css.map */
