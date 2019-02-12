@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import livereload from 'gulp-livereload';
 import requireDir from 'require-dir';
 
 requireDir('./gulp-tasks');
@@ -21,7 +22,7 @@ gulp.task('clean-files', gulp.series('clean', (done) => {
  * @param {Function} cb the pipe sequence that gulp should run.
  * @returns {void}
  */
-gulp.task('css', gulp.series('postcss', function(done) {
+gulp.task('css', gulp.series('postcss', (done) => {
   done();
 }));
 
@@ -65,20 +66,9 @@ gulp.task('imagemin', gulp.series(['image'], (done) => {
  * @param {Function} cb the pipe sequence that gulp should run.
  * @returns {void}
  */
-gulp.task('minify', gulp.series(['cssnano'], function(done) {
+gulp.task('minify', gulp.series(['cssnano'], (done) => {
   done();
 }));
-
-/**
- * Gulp task to run a watch task for file changes.
- *
- * @param {String} watch' the task name.
- * @param {Function} cb the pipe sequence that gulp should run.
- * @returns {void}
- */
-gulp.task('watch', () => {
-  gulp.watch('./src/css/**/*.css', gulp.series(['clean-files', 'css', 'imagemin', 'minify']));
-})
 
 /**
  * Gulp task to run the default build processes in a sequential order.
@@ -87,6 +77,19 @@ gulp.task('watch', () => {
  * @param {Function} cb the pipe sequence that gulp should run.
  * @returns {void}
  */
-gulp.task('default', gulp.series(['clean-files', 'css', 'copy-js', 'imagemin', 'minify'], function(done) {
-  done();
-}));
+gulp.task('default', gulp.series(['clean-files', 'css', 'copy-js', 'imagemin', 'minify']));
+
+/**
+ * Gulp task to watch for file changes and run the default build task..
+ *
+ * @param {String} 'watch' the task name.
+ * @param {Function} cb the pipe sequence that gulp should run.
+ * @returns {void}
+ */
+gulp.task('watch', (cb) => {
+  livereload.listen({
+    start: true,
+    host: 'goldsborophysicaltherapy.test'
+  });
+  gulp.watch('./src/css/**/*.css', gulp.series(['default']));
+});
