@@ -1,6 +1,5 @@
 import chalk from 'chalk';
 import gulp from 'gulp';
-import livereload from 'gulp-livereload';
 
 const log = console.log,
   nodeDir = './node_modules',
@@ -23,7 +22,6 @@ gulp.task('copy-vendor', () => {
   log(chalk.green('--- Copying JS Vendor Files ---'));
 
   return gulp.src(jsOpts.vendorFiles)
-    .pipe(gulp.dest(jsOpts.vendorDest))
-    .pipe(livereload());
+    .pipe(gulp.dest(jsOpts.vendorDest));
 });
 
