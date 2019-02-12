@@ -12,6 +12,13 @@
 	color: #666 !important;
 }
 
+.data-table.-pricing {
+	width: 75%;
+	margin-right: auto;
+	margin-bottom: 1rem;
+	margin-left: auto
+}
+
 .table-head,
 .table-body,
 .table-foot {
