@@ -2,6 +2,7 @@
 
 namespace GPT;
 
+use GPT\Modules\Divi\RemoveProjectsCPT;
 use GPT\Modules\Performance\DNSPrefetch;
 
 class Theme {
@@ -14,6 +15,13 @@ class Theme {
 	public $dnsPrefetch;
 
 	/**
+	 * Property representing the RemoveProjectsCPT class.
+	 *
+	 * @var \GPT\Modules\Divi\RemoveProjectsCPT
+	 */
+	public $projectsCPTArgs;
+
+	/**
 	 * The Theme Constructor.
 	 */
 	public function __construct() {
@@ -21,6 +29,7 @@ class Theme {
 		$this->setupL10n();
 
 		$this->dnsPrefetch = new DNSPrefetch();
+		$this->projectsCPTArgs = new RemoveProjectsCPT();
 
 		add_action( 'wp_enqueue_scripts', [$this, 'enqueueParentStyles'], 9 );
 		add_action( 'wp_enqueue_scripts', [$this, 'enqueueStyles'] );
