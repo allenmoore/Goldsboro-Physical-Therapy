@@ -1,7 +1,6 @@
 import atImport from 'postcss-import';
 import chalk from 'chalk';
 import gulp from 'gulp';
-import livereload from 'gulp-livereload';
 import pixrem from 'pixrem';
 import postcss from 'gulp-postcss';
 import presetEnv from 'postcss-preset-env';
@@ -48,7 +47,6 @@ gulp.task('postcss', () => {
       rgbaFallback()
     ]))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(opts.dest))
-    .pipe(livereload());
+    .pipe(gulp.dest(opts.dest));
 });
 
