@@ -551,4 +551,74 @@ label {
 	}
 }
 
+.table-title {
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
+	font-size: 18px;
+	font-size: 1.125rem;
+	text-align: center;
+}
+
+.data-table {
+	width: 100%;
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
+	border-collapse: collapse;
+	border-radius: 0;
+	color: #666 !important;
+}
+
+.data-table.-pricing {
+	width: 75%;
+	margin-right: auto;
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
+	margin-left: auto
+}
+
+.table-head,
+.table-body,
+.table-foot {
+	border: 1px solid #f1f1f1;
+	color: #666 !important;
+}
+
+.table-body {
+	background-color: #fefefe;
+	font-size: 12px;
+	font-size: .75rem;
+}
+
+.table-row {
+	border-bottom: 1px solid #f1f1f1;
+	background-color: #fefefe;
+}
+
+.head-cell,
+.data-cell {
+	padding: 4px 8px 4px !important;
+	padding: .25rem .5rem .25rem !important;
+	border-right: 1px solid #eee;
+	font-weight: normal !important;
+	text-align: left;
+}
+
+.head-cell.-label {
+	background-color: #f8f8f8;
+	font-size: 14px;
+	font-size: .875rem;
+	font-weight: bold !important;
+	text-align: center;
+}
+
+.data-cell {
+	text-align: right;
+}
+
+.discount-description {
+	font-size: 12px;
+	font-size: .75rem;
+	font-style: italic;
+}
+
 /*# sourceMappingURL=style.css.map */
