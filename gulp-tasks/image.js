@@ -1,7 +1,6 @@
 import chalk from 'chalk';
 import gulp from 'gulp';
 import image from 'gulp-image';
-import livereload from 'gulp-livereload';
 
 const log = console.log;
 
@@ -33,7 +32,6 @@ gulp.task('image', () => {
       concurrent: 10,
       quiet: true
     }))
-    .pipe(gulp.dest(opts.dest))
-    .pipe(livereload());
+    .pipe(gulp.dest(opts.dest));
 });
 
