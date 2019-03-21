@@ -1,0 +1,35 @@
+.product-title {
+	display: flex;
+	flex-flow: column nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
+	order: 0;
+    flex: 0 1 auto;
+	align-self: auto;
+	height: 4rem;
+	padding: .5rem !important;
+	background-color: #f3f3f3;
+	border-right: .0625rem solid #ddd;
+	border-bottom: .0625rem solid #ddd;
+	border-left: .0625rem solid #ddd;
+}
+
+.product-title h4 {
+	padding-bottom: 0;
+	line-height: 1.5;
+	font-size: .875rem;
+	font-weight: normal;
+	color: #666;
+	text-align: center;
+}
+
+@media (--bp-medium) {
+	.product-title {
+		height: 5rem;
+	}
+
+	.product-title h4 {
+		font-size: 1rem;
+	}
+}

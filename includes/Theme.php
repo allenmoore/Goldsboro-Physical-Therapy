@@ -31,8 +31,11 @@ class Theme {
 		$this->dnsPrefetch = new DNSPrefetch();
 		$this->projectsCPTArgs = new RemoveProjectsCPT();
 
+		$this->registerImageSizes();
+
 		add_action( 'wp_enqueue_scripts', [$this, 'enqueueParentStyles'], 9 );
 		add_action( 'wp_enqueue_scripts', [$this, 'enqueueStyles'] );
+		add_filter( 'image_size_names_choose', [$this, 'showImageSizes'] );
 	}
 
 	/**
@@ -76,5 +79,25 @@ class Theme {
 			GPT_VERSION,
 			'all'
 		);
+	}
+
+	/**
+	 * Method to register custom image sizes.
+	 */
+	public function registerImageSizes() {
+		add_image_size( 'staff-headshot', 225, 315, array( 'center', 'top' ) );
+	}
+
+	/**
+	 * Method to add a custom image size to the media uploader.
+	 *
+	 * @param array $sizes Array of image sizes and their names.
+	 * @return array Array of filtered image sizes.
+	 */
+	public function showImageSizes( $sizes ) {
+
+		return array_merge( $sizes, [
+			'staff-headshot' => __( 'Staff Headshot' ),
+		] );
 	}
 }

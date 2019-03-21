@@ -1,0 +1,17 @@
+.grid-row {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+	align-items: stretch;
+	padding-bottom: 0;
+}
+
+
+@media (--bp-medium) {
+    .et_pb_row.grid-row {
+		padding-top: 0;
+        padding-bottom: 0;
+    }
+}
