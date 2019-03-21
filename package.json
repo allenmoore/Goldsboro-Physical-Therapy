@@ -22,6 +22,7 @@
         "@babel/plugin-proposal-class-properties": "^7.2.3",
         "@babel/preset-env": "^7.2.3",
         "@babel/register": "^7.0.0",
+        "browser-sync": "^2.26.3",
         "caniuse-lite": "^1.0.30000927",
         "chalk": "^2.4.2",
         "cross-env": "^5.2.0",
@@ -33,6 +34,7 @@
         "gulp-filter": "^5.1.0",
         "gulp-image": "^4.4.1",
         "gulp-livereload": "^4.0.1",
+        "gulp-nodemon": "^2.4.2",
         "gulp-penthouse": "^0.2.0",
         "gulp-postcss": "^8.0.0",
         "gulp-rename": "^1.4.0",
@@ -44,6 +46,9 @@
         "postcss-import": "^12.0.1",
         "postcss-preset-env": "^6.5.0",
         "require-dir": "^1.2.0",
+        "stylelint": "^9.10.1",
+        "stylelint-config-allenmoore": "^1.2.0",
+        "stylelint-no-unsupported-browser-features": "^3.0.2",
         "vinyl-buffer": "^1.0.1",
         "vinyl-source-stream": "^2.0.0"
     }

@@ -1,7 +1,6 @@
 import chalk from 'chalk';
 import gulp from 'gulp';
 import criticalCSS from 'gulp-penthouse';
-import livereload from 'gulp-livereload';
 
 const log = console.log;
 
@@ -31,6 +30,5 @@ gulp.task('critical-css', () => {
       blockJSRequests: true,
       timeout: 60000
     }))
-    .pipe(gulp.dest(opts.dest))
-    .pipe(livereload());
+    .pipe(gulp.dest(opts.dest));
 });

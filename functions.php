@@ -14,7 +14,7 @@ add_action( 'after_setup_theme', function() {
 	}
 
 	if ( ! defined( 'GPT_VERSION' ) ) {
-		define( 'GPT_VERSION', '1.0.0' );
+		define( 'GPT_VERSION', '1.0.0.1' );
 	}
 	if ( ! defined( 'GPT_URL' ) ) {
 		define( 'GPT_URL', get_stylesheet_directory_uri() );
